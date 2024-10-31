@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1466683e19.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Немецкие автомобили</title>
+</head>
+
+<body>
+    <header>
+        <div class="page-top">
+            <a class="logo" href="#description">SEVEN AUTO</a>
+            <nav class="menu">
+                <a class="menu__item" href="#description">О нас</a>
+                <a class="menu__item" href="#auto-items">Каталог автомобилей</a>
+                <a class="menu__item" href="#">Контакты</a>
+            </nav>
+        </div>
+        <div class="page-search">
+            <input type="search" id="search-input">
+            <button type="button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="description" id="description">Мы уже десять лет работаем в сфере реализации новых автомобилей из Германии. Оказываем помощь в подборе и доставке. В наличии и под заказ. </section>
+        <div class="filters">
+            <div class="filters-sort">
+                <label for="sort">Сортировка:</label>
+                <select name="sort" id="sort">
+                    <option selected value="alphabet">По алфавиту</option>
+                    <option value="rating">По популярности</option>
+                    <option value="expensive">Сначала дорогие</option>
+                    <option value="cheap">Сначала дешевые</option>
+                </select>
+            </div>
+        </div>
+        <section id="auto-items"></section>
+        <span id="nothing-found"></span>
+
+    </main>
+
+    <footer class="menu">
+        <a class="menu__item" href="#description">О нас</a>
+        <a class="menu__item" href="#auto-items">Каталог автомобилей</a>
+        <a class="menu__item" href="#">Контакты</a>
+    </footer>
+
+    <template id="item-template">
+        <div class="auto-item">
+            <img src="">
+            <div class="content">
+                <div class="tags"></div>
+                <h1></h1>
+                <p></p>
+            </div>
+            <div class="footer-info">
+                <span class="price"></span>
+                <span class="popularity"></span>
+            </div>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>
