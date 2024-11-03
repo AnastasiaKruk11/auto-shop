@@ -16,7 +16,7 @@ const items = [{
     },
     {
         title: 'AUDI',
-        description: 'A4',
+        description: 'A4 TFSI S-line',
         tags: ['Под заказ', 'Выгодно'],
         price: 48000,
         img: './images/audi-a4.jpg',
@@ -32,7 +32,7 @@ const items = [{
     },
     {
         title: 'AUDI',
-        description: 'Q5',
+        description: 'Q5 Sportback S-line',
         tags: ['В наличии', 'Выгодно'],
         price: 52000,
         img: './images/audi-q5.jpg',
@@ -80,7 +80,7 @@ const items = [{
     },
     {
         title: 'Volkswagen',
-        description: 'Golf',
+        description: 'Golf hatchback',
         tags: ['В наличии', 'Выгодно'],
         price: 40000,
         img: './images/volkswagen-golf.JPG',
@@ -88,7 +88,7 @@ const items = [{
     },
     {
         title: 'Volkswagen',
-        description: 'Touareg',
+        description: 'Touareg R-line',
         tags: ['Под заказ', 'Выгодно'],
         price: 50000,
         img: './images/volkswagen-touareg.JPG',
@@ -178,8 +178,11 @@ function applySearch() {
 
     currentState = items.filter((item) => item.title.toLowerCase().includes(searchValue) || item.description.toLowerCase().includes(searchValue));
     renderItems(currentState.sort((a, b) => sortByAlphabet(a, b)));
-    searchInput.value = '';
-    sortControl.selectedIndex = 0;
+    sortSelect.selectedIndex = 0;
+
+    if (!searchInput.value) {
+        currentState = [...items];
+    }
 }
 
 searchButton.addEventListener('click', applySearch);
